@@ -56,4 +56,5 @@ allData <- melt(allData, id = c("subject", "activity"))
 ## Extract means from data
 allDataMeans <- dcast(allData, subject + activity ~ variable, mean)
 
+## Write file
 write.table(allDataMeans, "tidy.txt", row.names = FALSE, quote = FALSE)
